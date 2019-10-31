@@ -12,10 +12,14 @@
 */
 
 /*Route::get('/', function () {
+@section('content')
     return view('home');
 })->name('home');*/
 
 Route::get('/','HomeController');
 #Route::view('/','home', compact('noticias'))->name('home');
+
 Route::view('/about','about')->name('about');
+
 Route::view('/contact','contact')->name('contact');
+Route::post('/contact', 'ContactController@store');
